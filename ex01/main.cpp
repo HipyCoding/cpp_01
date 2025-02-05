@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:26:21 by candrese          #+#    #+#             */
-/*   Updated: 2025/02/05 04:12:59 by christian        ###   ########.fr       */
+/*   Updated: 2025/02/05 14:06:11 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main()
 		std::cout << "invalid number! " << std::endl;
 		return (0);
 	}
-	
+
 	Zombie* horde = zombieHorde(n, "Zombie");
 
 	while (i < n) 
@@ -34,7 +34,7 @@ int main()
 		horde[i].announce();
 		i++;
 	}
-	
+
 	delete[] horde;
 	return (0);
 }
