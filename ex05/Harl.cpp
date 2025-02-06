@@ -6,11 +6,27 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 20:16:06 by candrese          #+#    #+#             */
-/*   Updated: 2025/02/05 21:31:14 by candrese         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:49:26 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+Harl::Harl(void)
+{}
+
+Harl::Harl(const Harl& other)
+{
+	*this = other;
+}
+
+Harl::~Harl(void) {}
+
+Harl& Harl::operator=(const Harl& other)
+{
+	(void)other;
+	return *this;
+}
 
 void	Harl::debug(void)
 {
