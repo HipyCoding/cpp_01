@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:23:51 by candrese          #+#    #+#             */
-/*   Updated: 2025/02/05 02:56:30 by christian        ###   ########.fr       */
+/*   Updated: 2025/02/06 14:52:20 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,13 @@ private:
 	std::string name;
 
 public:
-	explicit Zombie(const std::string& zombieName);
-	~Zombie();	
-	void announce(void);
+	Zombie(); // Default constructor
+	Zombie(const std::string& zombieName); // Parametrized constructor 
+	Zombie(const Zombie& other); // Copy constructor
+	Zombie& operator=(const Zombie& other); // Copy assignment operator
+	~Zombie(); // Destructor
+
+	void announce();
 };
 
 Zombie* newZombie(const std::string& name);
