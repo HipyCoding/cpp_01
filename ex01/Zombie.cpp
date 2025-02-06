@@ -6,28 +6,34 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:26:26 by candrese          #+#    #+#             */
-/*   Updated: 2025/02/05 16:40:14 by candrese         ###   ########.fr       */
+/*   Updated: 2025/02/06 14:56:22 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie()
-{}
+Zombie::Zombie() : name("unnamed") {}
 
-Zombie::Zombie(std::string newName)
+Zombie::Zombie(const std::string& zombieName) : name(zombieName) {}
+
+Zombie::Zombie(const Zombie& other) : name(other.name) {}
+
+Zombie& Zombie::operator=(const Zombie& other)
 {
-	name = newName;
+	if (this != &other) {
+		name = other.name;
+	}
+	return *this;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << this->name << " is hit by a destructor" << std::endl;
+	std::cout << name << " is hit by destructor" << std::endl;
 }
 
-void Zombie::announce() const
+void Zombie::announce()
 {
-	std::cout << "BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void Zombie::setName(const std::string& zombieName)

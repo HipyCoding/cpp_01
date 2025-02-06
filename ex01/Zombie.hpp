@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:26:29 by candrese          #+#    #+#             */
-/*   Updated: 2025/02/05 04:04:23 by christian        ###   ########.fr       */
+/*   Updated: 2025/02/06 14:55:28 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,14 @@ private:
 	std::string name;
 
 public:
+public:
 	Zombie();
-	Zombie(std::string name);
+	Zombie(const std::string& zombieName);
+	Zombie(const Zombie& other);
+	Zombie& operator=(const Zombie& other);
 	~Zombie();
 
-	void announce() const;
+	void announce();
 	void setName(const std::string& zombieName);
 };
 

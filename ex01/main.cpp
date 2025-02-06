@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:26:21 by candrese          #+#    #+#             */
-/*   Updated: 2025/02/05 14:06:11 by candrese         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:05:13 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int main()
 
 	while (i < n) 
 	{
-		std::cout << "Zombie " << i + 1 << ": ";
 		horde[i].announce();
 		i++;
 	}
